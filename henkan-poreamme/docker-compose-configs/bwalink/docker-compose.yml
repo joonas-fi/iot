@@ -2,7 +2,8 @@ version: "3"
 services:
   bwalink:
     # was from latest
-    image: ghcr.io/jshank/bwalink@sha256:0f10cb2c2712d614fe51000298023d0d76520d624a94ffc99fafc15ed3365a19
+    # this one is custom image built on Joonas's computer for arm/v7 support
+    image: 5d40b2c71e6b
     restart: unless-stopped
     network_mode: host
     environment:

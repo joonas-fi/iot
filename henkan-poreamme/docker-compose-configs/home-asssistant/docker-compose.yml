@@ -1,12 +1,14 @@
+version: "3"
+
 services:
   homeassistant:
-    # digest is from stable
-    image: "ghcr.io/home-assistant/home-assistant@sha256:f8f13f6da9b38f6e33b9c40fded2a84ccd13ad69eb2a7e53bb045778fbccc229"
+    image: "ghcr.io/home-assistant/home-assistant:stable"
     volumes:
-      - ./:/config
+      - /home/pi/joonas-iot/henkan-poreamme/docker-compose-configs/home-asssistant/config:/config
       - /etc/localtime:/etc/localtime:ro
-      - /run/dbus:/run/dbus:ro
     restart: unless-stopped
-    privileged: true
     network_mode: host
+    # older Docker daemon had some problem with seccomp
+    security_opt:
+      - seccomp=unconfined
 

@@ -9,12 +9,17 @@ flowchart TD
     end
     subgraph "Raspberry Pi"
         homeassistant[Home Assistant]
+        mqtt[MQTT\nmosquitto]
+        bwalink
     end
     lan[Ethernet\nLAN]
     phonecontrol[Ohjaus puhelimesta] --> homeassistant
     ctrl --> serialbridge --> lan
-    homeassistant --> lan
+    homeassistant --> bwalink --> lan
+    mqtt <--> homeassistant
+    mqtt <--> bwalink
 ```
+
 
 Hardware
 --------
@@ -47,9 +52,14 @@ flowchart TD
     ctrlGND --> bridgeGND
 ```
 
+![](bridge.jpg)
+
+
 ### Bridge configuration
 
 Looks like one can access it over web interface in port 80.
+
+The URL is `http://192.168.1.254/`
 
 | Configuration | Value  |
 |---------------|--------|
@@ -59,11 +69,35 @@ Looks like one can access it over web interface in port 80.
 | Stop bits     | 1      |
 | Flow control  | None   |
 
+The TCP port for serial port is `4196`
+
+Troubleshooting:
+
+- The "pwr" light should stay always lit
+- When serial is connected properly and receiving data from the control board, the "act" light should blink in rapid succession
+- The "link" light should be stably lit. It seemed to only light up after we connected ethernet, so it might indicate ethernet link?
+
 
 Software
 --------
 
-TODO
+Home Assistant -> MQTT
+
+bwalink -> MQTT
+
+### Install steps
+
+- install mqtt
+- install home assistant
+- configure MQTT to home assistant
+- install bwalink
+
+
+### TODO
+
+- static IP reservation for RS485 bridge
+- Tailscale for raspberry pi
+- Tailscale for Henkka
 
 
 Links

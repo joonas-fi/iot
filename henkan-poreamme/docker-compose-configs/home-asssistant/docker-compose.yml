@@ -1,0 +1,12 @@
+services:
+  homeassistant:
+    # digest is from stable
+    image: "ghcr.io/home-assistant/home-assistant@sha256:f8f13f6da9b38f6e33b9c40fded2a84ccd13ad69eb2a7e53bb045778fbccc229"
+    volumes:
+      - ./:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+

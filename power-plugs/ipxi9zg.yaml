@@ -1,0 +1,7 @@
+packages:
+  common: !include
+    file: includes/athom-power-plug-v2.yaml
+    vars:
+      name: "power-plug-ipxi9zg"
+      friendly_name: "Movie room decoration ball"
+      room: "Movie room"

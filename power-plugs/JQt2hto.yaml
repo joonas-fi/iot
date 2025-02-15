@@ -1,0 +1,7 @@
+packages:
+  common: !include
+    file: includes/athom-power-plug-v2.yaml
+    vars:
+      name: "power-plug-jqt2hto"
+      friendly_name: "Bedroom decoration ball"
+      room: "Master bedroom"

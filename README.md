@@ -2,6 +2,9 @@
 
 Control of HVAC equipment through ESPHome
 
+## IoT device configs
+
+- [Power plugs](power-plugs/)
 
 ## Research notes
 

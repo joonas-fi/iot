@@ -11,6 +11,7 @@ Control of HVAC equipment through ESPHome
 - [toshiba-mustimaenkuja](docs/toshiba-mustimaenkuja.md)
 - [toshiba-kotomaki](docs/toshiba-kotomaki.md)
 - [Henkan poreamme](henkan-poreamme/)
+- [NFC reader](nfc-reader/)
 
 
 ## Programs

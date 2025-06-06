@@ -1,0 +1,7 @@
+packages:
+  common: !include
+    file: includes/athom-power-plug-v2-power-request.yaml
+    vars:
+      name: "power-plug-fibdile"
+      friendly_name: "eBike charger"
+      room: "Workshop"

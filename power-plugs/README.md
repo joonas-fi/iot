@@ -14,3 +14,15 @@ to flash:
 ```shell
 docker run --rm -v "$(pwd):/config" -it esphome/esphome run --device 192.168.1.8 DEVICE_ID.yaml
 ```
+
+
+Troubleshooting / tips
+---------------------
+
+### Just compile
+
+If you don't want to flash but just obtain the firmware file, do:
+
+```shell
+docker run --rm -v "$(pwd):/config" -it esphome/esphome compile DEVICE_ID.yaml
+```

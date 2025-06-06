@@ -1,0 +1,7 @@
+packages:
+  common: !include
+    file: includes/athom-power-plug-v2.yaml
+    vars:
+      name: "power-plug-won153s"
+      friendly_name: "Laundry room fridge"
+      room: "Laundry room"

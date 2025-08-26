@@ -12,6 +12,7 @@ Control of HVAC equipment through ESPHome
 - [toshiba-kotomaki](docs/toshiba-kotomaki.md)
 - [Henkan poreamme](henkan-poreamme/)
 - [NFC reader](nfc-reader/)
+- [Dishwasher](dishwasher/)
 
 
 ## Programs
